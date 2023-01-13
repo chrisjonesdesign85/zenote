@@ -230,7 +230,7 @@ select:focus {
 }
 
 @media screen and (max-width: 780px) {
-    .modal-content {
-        width: 80%;
+    .modal-content, .container {
+        width: 95%;
     }
 }
