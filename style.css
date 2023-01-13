@@ -233,4 +233,8 @@ select:focus {
     .modal-content, .container {
         width: 95%;
     }
+
+    .links {
+        display:none;
+    }
 }
