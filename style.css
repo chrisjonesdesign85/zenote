@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #202124;
+    color: #85B4F8;
+    font-size: 16px;
+}
+
+h1,
+h2 p {
+    font-family: 'Syne Mono', monospace;
+}
+
+ul a {
+    color: #85B4F8;
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: white;
+    text-decoration: overline;
+    transition: all 1s ease-in;
+}
+
+ul a:not(hover) {
+    transition: ease-out 1s
+}
+
+p {
+    color: white;
+}
+
+nav {
+    width: 100%;
+    font-size: 1.5em;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: #202124;
+    border-bottom: 1px solid #85B4F8;
+}
+
+#myBtn {
+    color: white;
+    padding: 10px;
+    border: none;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.links {
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+header {
+    padding-top: 100px;
+}
+
+.container {
+    width: 650px;
+    margin: auto;
+}
+
+.post-info {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.date,
+.author {
+    color: #85B4F8;
+}
+
+/* The Modal  */
+
+.modal {
+    /* Hidden by default */
+    display: none;
+    /* Stay in place */
+    position: fixed;
+    /* Sit on top */
+    z-index: 1;
+    /* Location of the box */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    /* Full width */
+    width: 100%;
+    /* Full height */
+    height: 100%;
+    /* Enable scroll if needed */
+    overflow: auto;
+    /* Fallback color */
+    background-color: rgb(0, 0, 0);
+    /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.416);
+    backdrop-filter: blur(5px);
+    filter: drop-shadow(0 0 0 2px white);
+
+
+}
+
+/* Modal Content */
+.modal-content {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #888;
+    backdrop-filter: blur(100px);
+
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    /* float: right; */
+    font-size: 78px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-form {
+    width: 90%;
+}
+
+.new-post-form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rbga(0, 0, 0, 0.14);
+    margin: auto;
+}
+
+input {
+    color: white;
+    padding: 3%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 1px solid #777;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+.modal-text-box {
+    width: 100%;
+    height: 200px;
+    color: white;
+    font-size: 16px;
+    padding: 3%;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post {
+    border: 1px solid #777;
+    margin-bottom: 50px;
+    border-left: 5px solid #85B4F8;
+}
+
+
+.post-submit {
+    background: #85b5f82d;
+    width: 50%;
+    border: none;
+    float: right;
+}
+
+.post-submit:hover,
+#myBtn:hover {
+    cursor: pointer;
+    transform: scale(107%);
+    text-shadow: #000;
+    transition: all ease 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.post-test {
+    width: 100%;
+    /* height: 600px; */
+    /* background: red; */
+    border-bottom: 1px solid #777;
+    margin-bottom: 50px;
+}
+
+.title-div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 780px) {
+    .modal-content {
+        width: 80%;
+    }
+}
