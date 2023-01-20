@@ -62,7 +62,10 @@ nav {
 }
 
 header {
+    height: 380px;
     padding-top: 100px;
+    background: url(img/pexels-athena-2582937.jpg);
+    background-position:;
 }
 
 .container {
@@ -230,11 +233,13 @@ select:focus {
 }
 
 @media screen and (max-width: 780px) {
-    .modal-content, .container {
+
+    .modal-content,
+    .container {
         width: 95%;
     }
 
     .links {
-        display:none;
+        display: none;
     }
 }

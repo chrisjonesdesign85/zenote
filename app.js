@@ -1,3 +1,6 @@
+//username
+let username = "Chris"
+
 //Get the modal
 let modal = document.getElementById("myModal")
 
@@ -29,34 +32,15 @@ span.onclick = () => {
 
 
 test = () => {
-    // get title input value
     let yes = document.querySelector("#myModal > div > div > form > fieldse > label:nth-child(2) > input").value
-
-    // get user input for title
     let textBox = document.querySelector("#text").value
-
-    // get user input for text-box
     let div = document.createElement("div")
-
-    // add the post-test class to the div
     div.classList.add('post-test')
-
-    // create a new h1
     let h1 = document.createElement("h1")
-
-    // make the h1 editable 
     h1.setAttribute("contenteditable", "true")
-
-    // give the user input to the h1
     h1.textContent = yes
-
-    // add the h1 to the new div
     div.appendChild(h1)
-
-    // create a new p element
     let p = document.createElement("p")
-
-    //make the p editable
     p.setAttribute("contenteditable", "true")
 
     // insert user text area data into the new parapgrah
@@ -68,10 +52,7 @@ test = () => {
     // Create post-info section
 
     // assign date to a variable
-    let date = Date().toString()
-
-    // cut off the part of the date that we don't need
-    let newDate = date.slice(-0, -36)
+    let date = new Date().toDateString()
 
     // create a div
     postInfo = document.createElement("div")
@@ -79,15 +60,22 @@ test = () => {
     //add class name of post-info to the div
     postInfo.classList.add('post-info')
 
+    //create a p element
+    postInfoP = document.createElement("p")
 
-    let postInfoText = `<span>Created on </span> ${newDate} by Admin.`;
+    // Create post-info data
+    let info = `<p>Created on <span class="date">${date}</span> by<span class="author"> ${username}</span`;
+
+    postInfoP.innerHTML = info
 
 
-    let infoData = document.createTextNode(postInfoText)
-    postInfo.appendChild(infoData)
-    div.appendChild(postInfo)
+    // postInfo.appendChild(infoData)
+    div.appendChild(postInfoP)
+
     let container = document.querySelector("body > div.container")
+
     container.appendChild(div)
+
     // post-submit
     let yesValue = document.forms["myForm"]["title"]
     let subjectValue = document.forms["myForm"]["subject"]
