@@ -112,7 +112,7 @@ nav {
 .post-info {
     text-align: right;
     font-size: 12px;
-    margin-top: 5px;
+    margin: 10px 0;
 }
 
 /* color the date and author blue */
@@ -157,6 +157,7 @@ nav {
     margin: auto;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid #777;
     backdrop-filter: blur(100px);
@@ -278,6 +279,10 @@ select:focus {
 /* Media Queries **/
 
 @media screen and (max-width: 780px) {
+
+    .quote-div {
+        padding: 10px;
+    }
 
     .modal-content,
     .container {

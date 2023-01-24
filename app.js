@@ -27,15 +27,18 @@ newPostBtn.onclick = () => {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => {
-    modal.style.display = "none"
+
     clearForms()
     if (formTitleValue === "") {
         console.log("blank Title")
     }
+    modal.style.display = "none"
+    console.log("clicked")
+    console.log(formTitleValue.value)
 }
 
 //When the user clicks anywhere outside of the modal, close it
-// window.onclick = (event) => {
+// window onclick = (event) => {
 //     if (event.target === modal) {
 //         modal.style.display = "none"
 //     }
