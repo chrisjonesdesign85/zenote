@@ -32,6 +32,7 @@ closeX.onclick = () => {
     if (formTitleValue.value !== "") {
         addNote()
     }
+
     // Close the Modal a.k.a. "Ninja Vanish!!"
     modal.style.display = "none"
 
@@ -52,6 +53,16 @@ addNote = () => {
 
     // get text box value
     let textBox = document.querySelector("#text").value
+
+    // Form Validation
+    if (inputValue == "") {
+        alert("Every Zenote must have a Title.")
+        return false;
+    }
+
+    // Capitalize First Letter of Title.
+    
+    // dynamically created content
 
     // create a div element
     let div = document.createElement("div")
