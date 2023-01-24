@@ -60,8 +60,8 @@ addNote = () => {
         return false;
     }
 
-    // Capitalize First Letter of Title.
-    
+
+
     // dynamically created content
 
     // create a div element
@@ -82,8 +82,25 @@ addNote = () => {
     // add the post-title class to the h1 element
     h1.classList.add('post-title')
 
-    // getting the input Title value and putting it into the h1
-    h1.textContent = inputValue
+    // Capitalize First Letter of Title.
+
+    // put the form title value in a variable
+    let formTitle = formTitleValue.value
+
+    //get the first letter of our variable formTitle
+    const firstLetter = formTitle.charAt(0)
+
+    // Capitalize the first letter and store it in a variable
+    const firstLetterCap = firstLetter.toUpperCase()
+
+    // Get the remaining letters in the title
+    const remainingLetters = formTitle.slice(1)
+
+    // Combine both the newly Capitalized first letter and the remaining letters into a variable
+    const capitalizedWord = firstLetterCap + remainingLetters
+
+    // get the new capitalized string from the input Title value and put it into the h1
+    h1.textContent = capitalizedWord
 
     // add the h1 one to the newly created div
     titleDiv.appendChild(h1)
