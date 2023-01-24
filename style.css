@@ -64,7 +64,7 @@ nav {
     width: 100%;
     font-size: 1.5em;
     margin: auto;
-    padding: 10px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,6 +77,7 @@ nav {
     color: white;
     padding: 10px;
     border: none;
+
     background: rgb(2, 0, 36);
     cursor: pointer;
 
@@ -85,8 +86,12 @@ nav {
 #new-post:hover {
     filter: drop-shadow(0 0 0 2px black);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: 1px 5px 6px black;
 }
 
+.new-note-helper {
+    color: #777;
+}
 
 .links {
     display: flex;
@@ -106,6 +111,14 @@ nav {
 .container {
     max-width: 650px;
     margin: auto;
+}
+
+.create-new-note {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 65px;
 }
 
 /* div that has date created and username that created the post*/
