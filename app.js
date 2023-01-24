@@ -20,8 +20,6 @@ let subjectValue = document.forms["myForm"]["subject"]
 // form textarea
 let boxValue = document.forms["myForm"]["textarea"]
 
-
-
 //When the user clicks the button, open the modal
 newPostBtn.onclick = () => {
     modal.style.display = "block"
@@ -31,6 +29,9 @@ newPostBtn.onclick = () => {
 span.onclick = () => {
     modal.style.display = "none"
     clearForms()
+    if (formTitleValue === "") {
+        console.log("blank Title")
+    }
 }
 
 //When the user clicks anywhere outside of the modal, close it
@@ -147,7 +148,7 @@ addNote = () => {
     clearForms()
 
     // close the modal
-    modal.style.display = "none";
+    closeNote()
 }
 
 // close modal

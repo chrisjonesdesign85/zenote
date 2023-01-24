@@ -12,6 +12,21 @@ body {
     font-size: 16px;
 }
 
+.logo {
+    color: #85B4F8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo:hover {
+    -webkit-filter: blur(3px);
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+}
+
 h1 {
     margin: 0;
     padding: 0;
@@ -39,7 +54,8 @@ ul a:hover {
     transition: all 1s ease-in;
 }
 
-ul a:not(hover) {
+ul a:not(hover),
+.logo:not(hover) {
     transition: ease-out 1s
 }
 
