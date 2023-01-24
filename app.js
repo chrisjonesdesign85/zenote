@@ -28,13 +28,14 @@ newPostBtn.onclick = () => {
 // When the user clicks on (x), close the modal
 closeX.onclick = () => {
 
+    // If the forms are not blank just add the note back to the main container
     if (formTitleValue.value !== "") {
         addNote()
     }
-
+    // Close the Modal a.k.a. "Ninja Vanish!!"
     modal.style.display = "none"
-    console.log("X clicked")
 
+    // Clear out the forms on exit
     clearForms()
 }
 
