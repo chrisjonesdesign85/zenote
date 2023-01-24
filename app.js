@@ -24,12 +24,15 @@ let boxValue = document.forms["myForm"]["textarea"]
 
 //When the user clicks the button, open the modal
 newPostBtn.onclick = () => {
-    modal.style.display = "block";
+    modal.style.display = "block"
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => {
-    modal.style.display = "none";
+    modal.style.display = "none"
+    formTitleValue.value = ""
+    subjectValue.value = ""
+    boxValue.value = ""
 }
 
 //When the user clicks anywhere outside of the modal, close it

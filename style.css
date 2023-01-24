@@ -230,6 +230,7 @@ i:hover {
     cursor: pointer;
     transform: scale(107%);
     text-shadow: #000;
+    color: rgb(177, 177, 177);
     transition: all ease 1;
 }
 
