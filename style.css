@@ -193,9 +193,8 @@ input {
 }
 
 .post {
-    border: 1px solid #777;
+    border-bottom: 1px solid #777;
     margin-bottom: 50px;
-    border-left: 5px solid #85B4F8;
 }
 
 
