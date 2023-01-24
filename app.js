@@ -30,9 +30,7 @@ newPostBtn.onclick = () => {
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => {
     modal.style.display = "none"
-    formTitleValue.value = ""
-    subjectValue.value = ""
-    boxValue.value = ""
+    clearForms()
 }
 
 //When the user clicks anywhere outside of the modal, close it
@@ -146,9 +144,7 @@ addNote = () => {
     container.appendChild(div)
 
     // clear the forms
-    formTitleValue.value = ""
-    subjectValue.value = ""
-    boxValue.value = ""
+    clearForms()
 
     // close the modal
     modal.style.display = "none";
@@ -157,6 +153,14 @@ addNote = () => {
 // close modal
 closeNote = () => {
     modal.style.display = "none";
+}
+
+
+// clear forms 
+let clearForms = () => {
+    formTitleValue.value = ""
+    subjectValue.value = ""
+    boxValue.value = ""
 }
 
 // update post
