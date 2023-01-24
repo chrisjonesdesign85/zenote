@@ -177,6 +177,8 @@ addNote = () => {
     // add the div with all the data into the container div
     container.appendChild(div)
 
+    // add AOS fade-in to the note divs
+    // div.setAttribute("data-aos", "fade-in")
     // clear the forms
     clearForms()
 
@@ -207,6 +209,9 @@ let updatePost = (e) => {
 
 // delete post
 let deletePost = (e) => {
-    e.parentElement.parentElement.parentElement.remove()
-    console.log("delete button clicked")
+    e.parentElement.parentElement.parentElement.classList.add('fade-out')
+
+    setTimeout(function () {
+        e.parentElement.parentElement.parentElement.remove()
+    }, 900)
 }

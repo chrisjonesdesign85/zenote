@@ -242,6 +242,9 @@ input {
 .post {
     border-bottom: 1px solid #777;
     margin-bottom: 50px;
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
 }
 
 
@@ -287,7 +290,20 @@ select:focus {
     color: #777;
 }
 
+.fade-out {
+    animation: fadeOut 1s;
+    opacity: 0;
+}
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
 
 
 /* Media Queries **/
