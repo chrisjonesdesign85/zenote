@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,9 +17,14 @@ h1 {
     padding: 0;
 }
 
+label {
+    margin: 10px;
+}
+
 h1,
 h2,
-p {
+p,
+a {
     font-family: 'Syne Mono', monospace;
 }
 
@@ -212,7 +219,7 @@ input {
 
 .post-submit:hover,
 #new-post:hover,
-i {
+i:hover {
     cursor: pointer;
     transform: scale(107%);
     text-shadow: #000;
@@ -241,6 +248,7 @@ select:focus {
 .options {
     display: flex;
     gap: 25px;
+    color: #777;
 }
 
 

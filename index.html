@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Zenote 1.0 2023</title>
 </head>
+
 <body>
     <nav>
         <!-- trigger/open the modal -->
@@ -21,7 +22,7 @@
     <div id="myModal" class="modal">
         <!-- Modal Content -->
         <div class="modal-content">
-            <span class="close"></span>
+            <span class="close" onClick="addNote()"></span>
             <!-- <h1>Enter New Post</h1> -->
             <div class="new-post-form">
                 <form action="#" class="modal-form" name="myForm" method="get" onsubmit="return false">
@@ -44,14 +45,14 @@
                             <textarea class="modal-text-box" name="textarea" id="text" required ></textarea>
                         </label>
                         <br />
-                        <label>
+                        <!-- <label>
                             I hear by authorize this post <input style="float: right;" type="checkbox" name="autorize">
-                        </label>
+                        </label> -->
                         <br />
                         <div class="modal-submit-section"> 
-                            <input type="submit" class="post-submit" value="Submit" onclick="addNote()">
-                            
+                            <input type="submit" class="post-submit" value="Submit" onclick="addNote()"> 
                         </div>
+                        
                     </fieldset>
                 </form>
             </div>

@@ -151,7 +151,11 @@ addNote = () => {
     modal.style.display = "none";
 }
 
+// close modal
+closeNote = () => {
+    modal.style.display = "none";
 
+}
 // update post
 let updatePost = (e) => {
     deletePost(e)
