@@ -8,7 +8,7 @@ let modal = document.getElementById("myModal")
 let newPostBtn = document.getElementById("new-post")
 
 //Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+let closeX = document.getElementsByClassName("close")[0];
 
 // get the post submit button
 let postSubmit = document.getElementsByClassName("btn")
@@ -25,16 +25,17 @@ newPostBtn.onclick = () => {
     modal.style.display = "block"
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = () => {
+// When the user clicks on (x), close the modal
+closeX.onclick = () => {
+
+    if (formTitleValue.value !== "") {
+        addNote()
+    }
+
+    modal.style.display = "none"
+    console.log("X clicked")
 
     clearForms()
-    if (formTitleValue === "") {
-        console.log("blank Title")
-    }
-    modal.style.display = "none"
-    console.log("clicked")
-    console.log(formTitleValue.value)
 }
 
 //When the user clicks anywhere outside of the modal, close it
