@@ -41,7 +41,7 @@ span.onclick = () => {
 
 addNote = () => {
     // get the input value
-    let inputValue = document.querySelector("#myModal > div > div > form > fieldse > label:nth-child(2) > input").value
+    let inputValue = document.querySelector("#myModal > div > div > form > fieldset > label:nth-child(2) > input").value
 
     // get text box value
     let textBox = document.querySelector("#text").value
@@ -154,8 +154,8 @@ addNote = () => {
 // close modal
 closeNote = () => {
     modal.style.display = "none";
-
 }
+
 // update post
 let updatePost = (e) => {
     deletePost(e)

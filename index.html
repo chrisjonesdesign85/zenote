@@ -15,20 +15,20 @@
 
 <body>
     <nav>
-        <!-- trigger/open the modal -->
+        <!-- trigger/open the modal button -->
         <button id="new-post">New Post</button>
 
         <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- Modal Content -->
         <div class="modal-content">
-            <span class="close" onClick="addNote()"></span>
+            <span class="close">X</span>
             <!-- <h1>Enter New Post</h1> -->
             <div class="new-post-form">
                 <form action="#" class="modal-form" name="myForm" method="get" onsubmit="return false">
-                    <fieldse class="fieldset">
+                    <fieldset class="fieldset">
                         <legend>
-                            New Post
+                            Note Creation
                         </legend>
                         <label>
                             Title:
@@ -58,11 +58,10 @@
             </div>
         </div>
     </div>
-
+    <a href="#">
+        <h1>Zenote.</h1>
+    </a>
     <!-- main content -->
-
-        <h1>Dev/Null</h1>
-
          <div class="links">
             <ul>
                 <a href="#">blog</a>
@@ -71,12 +70,14 @@
             </ul>
          </div>
     </nav>
+    <br>
+    <br><br>
 
-    <header>
+    <div class="quote-div">
         <p>
-            Hello World
+            “The mind of the beginner is empty, free of the habits of the expert, ready to accept, to doubt, and open to all the possibilities.” – Shunryu Suzuki
         </p>
-    </header>
+    </div>
 
     <div class="container">
         <div class="post">
