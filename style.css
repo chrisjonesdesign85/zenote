@@ -191,6 +191,11 @@ nav {
     text-decoration: none;
 }
 
+.close::before,
+.close::after {
+    content: none;
+}
+
 .fieldset {
     display: flex;
     flex-direction: column;
