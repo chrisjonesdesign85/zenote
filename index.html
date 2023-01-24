@@ -31,23 +31,19 @@
                             Note Creation
                         </legend>
                         <label>
-                            Title:
-                            <Input type="text" name="title" class="title-input" size="30" max-length="100" required  style="float: right;"></Input>
+            
+                            <input type="text" name="title" class="title-input" placeholder="Enter note title..." size="35" max-length="100" required ></input>
                         </label>
                         <br />
                         <label>
-                            Subject:
-                            <Input type="text" name="subject" class="subject-input" size="30" max-length="100"  style="float: right;"></Input>
+    
+                            <Input type="text" name="subject" class="subject-input" placeholder="Subject goes here, followed by commas." size="35" max-length="100"></Input>
                         </label>
                         <br />
                         <label>
-                            Post:
-                            <textarea class="modal-text-box" name="textarea" id="text" required ></textarea>
+                            <textarea class="modal-text-box" name="textarea" id="text" placeholder="This is where the main body text goes..." required ></textarea>
                         </label>
                         <br />
-                        <!-- <label>
-                            I hear by authorize this post <input style="float: right;" type="checkbox" name="autorize">
-                        </label> -->
                         <br />
                         <div class="modal-submit-section"> 
                             <input type="submit" class="post-submit" value="Submit" onclick="addNote()"> 
