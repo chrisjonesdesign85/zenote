@@ -15,7 +15,7 @@
 <body>
     <nav>
         <!-- trigger/open the modal -->
-        <button id="myBtn">New Post</button>
+        <button id="new-post">New Post</button>
 
         <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -81,11 +81,14 @@
         <div class="post">
 
             <div class="title-div">
-                <h1 contenteditable="true">Title</h1>  
-                <i class="fa-sharp fa-solid fa-lock"></i>
+                <h1>What is Development?</h1>  
+                <div class="options">
+                    <i onClick="updatePost(this)" class="fas fa-edit"></i>
+                    <i onClick ="deletePost(this)" class="fas fa-trash-alt"></i>
+                </div>
             </div>
       
-            <p contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt expedita, odio dolor eius ut provident pariatur veritatis ipsa unde, vero soluta quo? Ipsum laboriosam molestiae quisquam! Dolores quidem voluptate odit corporis inventore temporibus debitis provident dicta molestias perferendis nam sequi deserunt harum reiciendis, error labore, est, reprehenderit doloremque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt expedita, odio dolor eius ut provident pariatur veritatis ipsa unde, vero soluta quo? Ipsum laboriosam molestiae quisquam! Dolores quidem voluptate odit corporis inventore temporibus debitis provident dicta molestias perferendis nam sequi deserunt harum reiciendis, error labore, est, reprehenderit doloremque repellat!</p>
         
             <div class="post-info">
                 

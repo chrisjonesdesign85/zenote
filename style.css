@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background: #202124;
     color: #85B4F8;
@@ -12,7 +11,8 @@ body {
 }
 
 h1,
-h2 p {
+h2,
+p {
     font-family: 'Syne Mono', monospace;
 }
 
@@ -48,24 +48,24 @@ nav {
     border-bottom: 1px solid #85B4F8;
 }
 
-#myBtn {
+#new-post {
     color: white;
     padding: 10px;
     border: none;
     background: rgb(2, 0, 36);
+    cursor: pointer;
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 .links {
-    /* display: flex; */
-    /* justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
 }
 
 header {
-    height: 380px;
+    /* height: 380px; */
     padding-top: 100px;
-    background: url(img/pexels-athena-2582937.jpg);
-    background-position:;
+    /* background: url(img/pexels-athena-2582937.jpg); */
 }
 
 .container {
@@ -73,16 +73,19 @@ header {
     margin: auto;
 }
 
+/* div that has date created and username that created the post*/
 .post-info {
     text-align: right;
     font-size: 12px;
     margin-top: 5px;
 }
 
+/* color the date and author blue */
 .date,
 .author {
     color: #85B4F8;
 }
+
 
 /* The Modal  */
 
@@ -204,7 +207,8 @@ input {
 }
 
 .post-submit:hover,
-#myBtn:hover {
+#new-post:hover,
+i {
     cursor: pointer;
     transform: scale(107%);
     text-shadow: #000;
@@ -219,8 +223,6 @@ select:focus {
 
 .post-test {
     width: 100%;
-    /* height: 600px; */
-    /* background: red; */
     border-bottom: 1px solid #777;
     margin-bottom: 50px;
 }
@@ -231,6 +233,16 @@ select:focus {
     padding: 10px;
     justify-content: space-between;
 }
+
+.options {
+    display: flex;
+    gap: 25px;
+}
+
+
+
+
+/* Media Queries **/
 
 @media screen and (max-width: 780px) {
 
