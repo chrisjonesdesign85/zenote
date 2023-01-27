@@ -104,17 +104,30 @@ nav {
 }
 
 .links {
-    width: 300px;
+    width: 150px;
     display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}
+
+.links div {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
 }
 
+.storage-number {
+    align-self: flex-end;
+}
+
 .quote-div {
-    /* height: 380px; */
     padding: 100px;
-    /* margin-top: 65px; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #777;
@@ -177,6 +190,7 @@ nav {
 
 /* Modal Content */
 .modal-content {
+    color: white;
     background: #202124;
     max-width: 600px;
     margin: auto;
@@ -307,6 +321,8 @@ select:focus {
 
 .options {
     display: flex;
+    justify-content: space-between;
+    width: 60px;
     gap: 25px;
     color: #777;
 }
@@ -335,12 +351,21 @@ select:focus {
         padding: 10px;
     }
 
+    .modal-content {
+        padding: 30px 0;
+        margin: 0 auto;
+    }
+
+    .new-post-form {
+        padding: 10px;
+        margin: 0;
+    }
+
     .modal-content,
     .container {
         width: 95%;
     }
 
-    .links {
-        /* display: none; */
-    }
 }
+
+@media screen and (max-wdith: 580px) {}

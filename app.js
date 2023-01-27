@@ -27,7 +27,7 @@ let storeNumber = () => {
     storageNumber.textContent = localStorage.length
 }
 
-// storeNumber()
+storeNumber()
 
 // get notes
 let getNotes = () => {
@@ -329,14 +329,11 @@ let updateNote = (e) => {
     modal.style.display = "block";
     formTitleValue.value = e.parentElement.parentElement.textContent
     boxValue.value = e.parentElement.parentElement.nextSibling.textContent
-
-    // update localStorage
-
 }
 
 // delete post
 let deleteNote = (e) => {
-    
+
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
 
@@ -349,19 +346,16 @@ let deleteNote = (e) => {
     let titleText = e.parentElement.parentElement.firstChild.textContent
 
     // delete that localStorage Item
-    // this is going to have to change
-    // let newObject = localStorage.getItem("notes")
-    // let newArray = JSON.parse(newObject)
     let newTitleA = titleText.toLowerCase()
     let newTitle = `"${newTitleA}"`
     console.log(newTitleA)
-    // localStorage.removeItem(newTitle)
-
     localStorage.removeItem(newTitleA)
+
     Object.keys(localStorage).forEach(function (key) {
         console.log(localStorage.getItem(key));
     });
 
+    // update the total note counter
     storeNumber()
 
 }
