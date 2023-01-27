@@ -315,6 +315,7 @@ let addNote = () => {
 
     // update the total notes number
     storeNumber()
+    getNotes()
 
     // clear the forms
     clearForms()
