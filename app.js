@@ -336,7 +336,7 @@ let updateNote = (e) => {
 
 // delete post
 let deleteNote = (e) => {
-    localStorage.clear()
+
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
 
