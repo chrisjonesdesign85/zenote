@@ -157,7 +157,7 @@ nav {
     /* Sit on top */
     z-index: 99999;
     /* Location of the box */
-    padding-top: 200px;
+    padding-top: 100px;
     left: 0;
     top: 0;
     /* Full width */
@@ -166,13 +166,13 @@ nav {
     height: 100%;
     /* Enable scroll if needed */
     overflow: auto;
+    /* backgroun color */
     background: #000;
     background: rgb(2, 0, 36, 0.5);
     /* Blur the Background */
     backdrop-filter: blur(7px);
-    filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
     /* Add a drop shadow */
-    filter: drop-shadow(0 0 0 2px white);
+    
 }
 
 /* Modal Content */
@@ -184,6 +184,7 @@ nav {
     border-radius: 2%;
     display: flex;
     flex-direction: column;
+    filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
 }
 
 /* The Close Button */
