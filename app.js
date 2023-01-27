@@ -26,7 +26,9 @@ let storeNumber = () => {
     let storageNumber = document.querySelector(".storageNumber")
     storageNumber.textContent = localStorage.length
 }
+
 storeNumber()
+
 // get notes
 let getNotes = () => {
     let localArray = Object.entries(localStorage)
