@@ -71,10 +71,13 @@ nav {
     font-size: 1.5em;
     margin: auto;
     padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+
     background-color: #202124;
     border-bottom: 1px solid #85B4F8;
 }
@@ -154,7 +157,7 @@ nav {
     /* Sit on top */
     z-index: 99999;
     /* Location of the box */
-    padding-top: 100px;
+    padding-top: 200px;
     left: 0;
     top: 0;
     /* Full width */
@@ -164,24 +167,23 @@ nav {
     /* Enable scroll if needed */
     overflow: auto;
     /* Black with opacity */
-    background-color: rgba(0, 0, 0, 0.1);
-    /* Fallback color */
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to top, 40);
     /* Blur the Background */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
     /* Add a drop shadow */
     filter: drop-shadow(0 0 0 2px white);
 }
 
 /* Modal Content */
 .modal-content {
+    background: #202124;
     max-width: 600px;
     margin: auto;
     padding: 20px;
     border-radius: 2%;
     display: flex;
     flex-direction: column;
-    background: rgb(0, 11, 43);
 }
 
 /* The Close Button */
@@ -206,6 +208,7 @@ nav {
 }
 
 .fieldset {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,7 +221,7 @@ nav {
 }
 
 .new-post-form {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,9 +230,10 @@ nav {
 }
 
 input {
+    width: 100%;
     color: white;
     padding: 3%;
-    background: #777;
+    background: #333954;
     border: none;
     border-bottom: 1px solid #777;
     border-radius: 5px;
@@ -244,7 +248,7 @@ input {
     font-size: 16px;
     padding: 3%;
     margin-top: 10px;
-    background: #777;
+    background: #333954;
     border-radius: 5px;
     border: none;
     border-bottom: 1px solid #777;
@@ -260,10 +264,11 @@ input {
 
 
 .post-submit {
-    background: #85b5f82d;
+    background: #333954;
     width: 50%;
     border: none;
     float: right;
+    border-radius: 50px;
 }
 
 .post-submit:hover,

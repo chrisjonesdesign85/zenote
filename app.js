@@ -22,28 +22,24 @@ let subjectValue = document.forms["myForm"]["subject"]
 // form textarea
 let boxValue = document.forms["myForm"]["textarea"]
 
-
-let storageNumber = document.querySelector(".storageNumber")
-storageNumber.textContent = localStorage.length
-
-// empty array to store note objects
-let data = []
-
+let storeNumber = () => {
+    let storageNumber = document.querySelector(".storageNumber")
+    storageNumber.textContent = localStorage.length
+}
+storeNumber()
 // get notes
 let getNotes = () => {
-    let notes;
     let localArray = Object.entries(localStorage)
 
-    Object.keys(localStorage).forEach(function (key, value) {
-        console.log(key);
-
+    Object.keys(localStorage).forEach(function (key) {
 
         // console.log(localStorage.getItem());
         let newDiv = document.createElement("div")
 
         // create a new post div
         newDiv.classList.add("post", "aos-init", "aos-animate")
-
+        // add the filpdown animation 
+        newDiv.setAttribute("data-aos", "flipdown")
         // create a new div for the title elements
         let titleDiv = document.createElement("div")
 
@@ -77,6 +73,7 @@ let getNotes = () => {
 
         // add the edit font-awesome icon
         editIcon.classList.add("fas", "fa-edit")
+
 
         // add the onClick attribute to the edit Icon
         editIcon.setAttribute("onClick", "updateNote(this)")
@@ -125,7 +122,11 @@ let getNotes = () => {
 
         // postInfo.appendChild(infoData)
         newDiv.appendChild(postInfoP)
+
+        // get the container div
         let container = document.querySelector(".container")
+
+        // add the new div to the container
         container.append(newDiv)
     });
 
@@ -187,10 +188,10 @@ let addNote = () => {
         body: textBox
     }
 
-    data.push(saveData)
-    // localStorage.setItem("notes", JSON.stringify(data))
+    // data.push(saveData)
+    // set the title and body in local storage
+
     localStorage.setItem(inputValue, textBox)
-    // console.log(localStorage.notes)
 
     // dynamically created content
 
@@ -302,13 +303,16 @@ let addNote = () => {
     div.appendChild(postInfoP)
 
     // get the container div
-    let container = document.querySelector("body > div.container")
+    let container = document.querySelector(".container")
 
     // add the div with all the data into the container div
     container.appendChild(div)
 
     // add AOS fade-in to the note divs
     div.setAttribute("data-aos", "flip-down")
+
+    // update the total notes number
+    storeNumber()
 
     // clear the forms
     clearForms()
@@ -355,18 +359,8 @@ let deleteNote = (e) => {
     Object.keys(localStorage).forEach(function (key) {
         console.log(localStorage.getItem(key));
     });
-    // localStorage.forEach(function (note) {
-    //     console.log(note.title)
-    //     if (note.title == titleText) {
-    //         // data.splice(newTitle)
-    //         console.log(newArray)
-    //         console.log(localStorage)
-    //     }
 
-    // })
-
-    // console.log(newArrayString)
-    // localStorage.setItem("notes", JSON.stringify(newArray))
+    storeNumber()
 
 }
 
