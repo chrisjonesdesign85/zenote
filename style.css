@@ -43,6 +43,10 @@ a {
     font-family: 'Syne Mono', monospace;
 }
 
+i {
+    color: white;
+}
+
 ul a {
     color: #85B4F8;
     text-decoration: none;
