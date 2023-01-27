@@ -12,6 +12,7 @@ body {
     font-size: 16px;
 }
 
+/* Zenote Logo */
 .logo {
     color: #85B4F8;
     text-decoration: none;
@@ -30,6 +31,7 @@ h1 {
     padding: 0;
 }
 
+/* the form inputs */
 label {
     margin: 10px;
 }
@@ -69,15 +71,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background: #202124;
+    background-color: #202124;
     border-bottom: 1px solid #85B4F8;
 }
 
+/*new post button*/
 #new-post {
     color: white;
     padding: 10px;
     border: none;
-
     background: rgb(2, 0, 36);
     cursor: pointer;
 
@@ -89,6 +91,7 @@ nav {
     box-shadow: 1px 5px 6px black;
 }
 
+/* The text to the left of the new note button*/
 .new-note-helper {
     color: #777;
 }
@@ -143,7 +146,7 @@ nav {
     /* Stay in place */
     position: fixed;
     /* Sit on top */
-    z-index: 1;
+    /* z-index: 99999; */
     /* Location of the box */
     padding-top: 100px;
     left: 0;
@@ -157,7 +160,7 @@ nav {
     /* Fallback color */
     background-color: rgb(0, 0, 0);
     /* Black with opacity */
-    background-color: rgba(0, 0, 0, 0.416);
+    background-color: rgba(0, 0, 0, 0.1);
     /* Blur the Background*/
     backdrop-filter: blur(5px);
     /* Add a drop shadow */
@@ -169,11 +172,10 @@ nav {
     max-width: 600px;
     margin: auto;
     padding: 20px;
+    border-radius: 2%;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid #777;
-    backdrop-filter: blur(100px);
+    background: #000;
 }
 
 /* The Close Button */
@@ -189,6 +191,7 @@ nav {
 .close:focus {
     color: #fff;
     text-decoration: none;
+    transform: scale(1.2);
 }
 
 .close::before,
@@ -213,14 +216,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rbga(0, 0, 0, 0.14);
+    background: rbga(0, 0, 0);
     margin: auto;
 }
 
 input {
     color: white;
     padding: 3%;
-    background: rgba(255, 255, 255, 0.1);
+    background: #777;
     border: none;
     border-bottom: 1px solid #777;
     border-radius: 5px;
@@ -235,7 +238,7 @@ input {
     font-size: 16px;
     padding: 3%;
     margin-top: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #777;
     border-radius: 5px;
     border: none;
     border-bottom: 1px solid #777;
@@ -247,9 +250,6 @@ input {
 .post {
     border-bottom: 1px solid #777;
     margin-bottom: 50px;
-    opacity: 1;
-    -webkit-transition: opacity 1000ms linear;
-    transition: opacity 1000ms linear;
 }
 
 
@@ -280,6 +280,7 @@ select:focus {
     width: 100%;
     border-bottom: 1px solid #777;
     margin-bottom: 50px;
+    background-color: red;
 }
 
 .title-div {

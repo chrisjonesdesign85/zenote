@@ -15,10 +15,124 @@ let postSubmit = document.getElementsByClassName("btn")
 
 // form title
 let formTitleValue = document.forms["myForm"]["title"]
+
 //form subject
 let subjectValue = document.forms["myForm"]["subject"]
+
 // form textarea
 let boxValue = document.forms["myForm"]["textarea"]
+
+
+// let storageNumber = document.querySelector(".storageNumber")
+// storageNumber.textContent = localStorage.length
+// empty array to store note objects
+let data = []
+
+// get notes
+let getNotes = () => {
+    let notes;
+    let localArray = Object.entries(localStorage)
+
+    Object.keys(localStorage).forEach(function (key, value) {
+        console.log(key);
+
+
+        // console.log(localStorage.getItem());
+        let newDiv = document.createElement("div")
+
+        // create a new post div
+        newDiv.classList.add("post", "aos-init", "aos-animate")
+
+        // create a new div for the title elements
+        let titleDiv = document.createElement("div")
+
+        // add the titleDiv to the 'postDiv'
+        newDiv.appendChild(titleDiv)
+
+        // add 'title-div' class name to the div
+        titleDiv.classList.add("title-div")
+
+        // create a new h1 for the title 
+        let testh1 = document.createElement("h1")
+
+        testh1.innerHTML = testh1.innerHTML = key;
+        // add the post-title class to the h1 element
+        testh1.classList.add('post-title')
+
+        // add the h1 one to the newly created div
+        titleDiv.appendChild(testh1)
+
+        // create options div
+        let optionsDiv = document.createElement("div")
+
+        // add the options class name to the new div
+        optionsDiv.classList.add("options")
+
+        // add the options div to the title div
+        titleDiv.appendChild(optionsDiv)
+
+        // create edit icon
+        let editIcon = document.createElement("i")
+
+        // add the edit font-awesome icon
+        editIcon.classList.add("fas", "fa-edit")
+
+        // add the onClick attribute to the edit Icon
+        editIcon.setAttribute("onClick", "updateNote(this)")
+
+        // create delete icon
+        let deleteIcon = document.createElement("i")
+
+        // add the delete font-awesome icon
+        deleteIcon.classList.add("fas", "fa-trash-alt")
+
+        // add the onClick attribute to the delete Icon
+        deleteIcon.setAttribute("onClick", "deleteNote(this)")
+
+        // add the icons to the options div
+        optionsDiv.appendChild(editIcon)
+        optionsDiv.appendChild(deleteIcon)
+
+        // add the options div to the titleDiv
+        titleDiv.appendChild(optionsDiv)
+
+        // create a paragraph element
+        let p = document.createElement("p")
+
+        // insert user text area data into the new parapgrah
+        p.textContent = window.localStorage.getItem(key)
+
+        // add the p the the new post div
+        newDiv.appendChild(p)
+
+        let date = new Date().toDateString()
+
+        // create a post-info div
+        postInfo = document.createElement("div")
+
+        //create a p element
+        postInfoP = document.createElement("p")
+
+        //add class name of post-info to the div
+        postInfoP.classList.add('post-info')
+
+        // Create post-info data
+        let info = `<p>Created on <span class="date">${date}</span> by<span class="author"> ${username}</span`;
+
+        // update the post info paragrah with the date and username
+        postInfoP.innerHTML = info
+
+        // postInfo.appendChild(infoData)
+        newDiv.appendChild(postInfoP)
+        let container = document.querySelector(".container")
+        container.append(newDiv)
+    });
+
+
+}
+
+//get notes from localStorage and create them on page load.
+document.addEventListener('DOMContentLoaded', getNotes)
 
 //When the user clicks the button, open the modal
 newPostBtn.onclick = () => {
@@ -40,14 +154,20 @@ closeX.onclick = () => {
     clearForms()
 }
 
-//When the user clicks anywhere outside of the modal, close it
-// window onclick = (event) => {
-//     if (event.target === modal) {
-//         modal.style.display = "none"
-//     }
-// }
+// clear forms 
+let clearForms = () => {
+    formTitleValue.value = ""
+    subjectValue.value = ""
+    boxValue.value = ""
+}
 
-addNote = () => {
+// close modal
+let closeNote = () => {
+    modal.style.display = "none";
+}
+
+let addNote = () => {
+
     // get the input value
     let inputValue = document.querySelector("#myModal > div > div > form > fieldset > label:nth-child(2) > input").value
 
@@ -60,7 +180,16 @@ addNote = () => {
         return false;
     }
 
+    // create an object with the note title and body
+    const saveData = {
+        title: inputValue,
+        body: textBox
+    }
 
+    data.push(saveData)
+    // localStorage.setItem("notes", JSON.stringify(data))
+    localStorage.setItem(inputValue, textBox)
+    // console.log(localStorage.notes)
 
     // dynamically created content
 
@@ -122,7 +251,7 @@ addNote = () => {
     editIcon.classList.add("fa-edit")
 
     // add the onClick attribute to the edit Icon
-    editIcon.setAttribute("onClick", "updatePost(this)")
+    editIcon.setAttribute("onClick", "updateNote(this)")
 
     // create delete icon
     let deleteIcon = document.createElement("i")
@@ -132,7 +261,7 @@ addNote = () => {
     deleteIcon.classList.add("fa-trash-alt")
 
     // add the onClick attribute to the delete Icon
-    deleteIcon.setAttribute("onClick", "deletePost(this)")
+    deleteIcon.setAttribute("onClick", "deleteNote(this)")
 
     // add the icons to the options div
     optionsDiv.appendChild(editIcon)
@@ -178,7 +307,8 @@ addNote = () => {
     container.appendChild(div)
 
     // add AOS fade-in to the note divs
-    // div.setAttribute("data-aos", "fade-in")
+    div.setAttribute("data-aos", "flip-down")
+
     // clear the forms
     clearForms()
 
@@ -186,32 +316,58 @@ addNote = () => {
     closeNote()
 }
 
-// close modal
-closeNote = () => {
-    modal.style.display = "none";
-}
-
-
-// clear forms 
-let clearForms = () => {
-    formTitleValue.value = ""
-    subjectValue.value = ""
-    boxValue.value = ""
-}
-
-// update post
-let updatePost = (e) => {
-    deletePost(e)
+// update
+let updateNote = (e) => {
+    deleteNote(e)
     modal.style.display = "block";
     formTitleValue.value = e.parentElement.parentElement.textContent
     boxValue.value = e.parentElement.parentElement.nextSibling.textContent
+
+    // update localStorage
+
 }
 
 // delete post
-let deletePost = (e) => {
+let deleteNote = (e) => {
+
+    // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
 
+    // wait for the animation to happen before deleting the post
     setTimeout(function () {
         e.parentElement.parentElement.parentElement.remove()
-    }, 900)
+    }, 1000);
+
+    // get the Note Title text
+    let titleText = e.parentElement.parentElement.firstChild.textContent
+
+    // delete that localStorage Item
+    // this is going to have to change
+    // let newObject = localStorage.getItem("notes")
+    // let newArray = JSON.parse(newObject)
+    let newTitleA = titleText.toLowerCase()
+    let newTitle = `"${newTitleA}"`
+    console.log(newTitleA)
+    // localStorage.removeItem(newTitle)
+
+    localStorage.removeItem(newTitleA)
+    Object.keys(localStorage).forEach(function (key) {
+        console.log(localStorage.getItem(key));
+    });
+    // localStorage.forEach(function (note) {
+    //     console.log(note.title)
+    //     if (note.title == titleText) {
+    //         // data.splice(newTitle)
+    //         console.log(newArray)
+    //         console.log(localStorage)
+    //     }
+
+    // })
+
+    // console.log(newArrayString)
+    // localStorage.setItem("notes", JSON.stringify(newArray))
+
 }
+
+
+

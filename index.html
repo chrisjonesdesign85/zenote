@@ -35,7 +35,7 @@
                         </legend>
                         <!-- Title -->
                         <label>
-                            <input type="text" name="title" class="title-input" placeholder="Enter note title..." size="35" max-length="100" required />
+                            <input type="text" name="title" class="title-input" placeholder="Enter note title..." size="35" max-length="100" />
                         </label>
                         <br />
 
@@ -47,7 +47,7 @@
 
                         <!-- Body Text -->
                         <label>
-                            <textarea class="modal-text-box" name="textarea" id="text" placeholder="This is where the main body text goes..." required ></textarea>
+                            <textarea class="modal-text-box" name="textarea" id="text" placeholder="This is where the main body text goes..."></textarea>
                         </label>
                         <br />
                         <br />
@@ -93,6 +93,7 @@
             <h3 class="new-note-helper">Click the button to create a new Zenote</h3>
              <!-- trigger/open the modal button -->
         <button id="new-post">New Post</button>
+        <h3>You have <span class="storageNumber"></span> notes</h3>
         </div>
         <div class="post">
 
@@ -101,8 +102,8 @@
                 <h1>What is Development?</h1>  
 
                 <div class="options">
-                    <i onClick="updatePost(this)" class="fas fa-edit"></i>
-                    <i onClick ="deletePost(this)" class="fas fa-trash-alt"></i>
+                    <i onClick="updateNote(this)" class="fas fa-edit"></i>
+                    <i onClick ="deleteNote(this)" class="fas fa-trash-alt"></i>
                 </div>
 
             </div>
@@ -113,7 +114,7 @@
                 
                 <p> Created on
                     <span class="date">Wednesday, January 11, 2023</span> by
-                    <span class="author">Admin</span>
+                    <span class="author">Chris</span>
                 </p>
 
             </div><!-- end post-info -->
