@@ -23,8 +23,9 @@ let subjectValue = document.forms["myForm"]["subject"]
 let boxValue = document.forms["myForm"]["textarea"]
 
 
-// let storageNumber = document.querySelector(".storageNumber")
-// storageNumber.textContent = localStorage.length
+let storageNumber = document.querySelector(".storageNumber")
+storageNumber.textContent = localStorage.length
+
 // empty array to store note objects
 let data = []
 
