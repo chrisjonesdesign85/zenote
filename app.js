@@ -27,7 +27,7 @@ let storeNumber = () => {
     storageNumber.textContent = localStorage.length
 }
 
-storeNumber()
+// storeNumber()
 
 // get notes
 let getNotes = () => {
