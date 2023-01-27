@@ -166,8 +166,8 @@ nav {
     height: 100%;
     /* Enable scroll if needed */
     overflow: auto;
-    /* Black with opacity */
-    background-image: linear-gradient(to top, 40);
+    background: #000;
+    background: rgb(2, 0, 36, 0.5);
     /* Blur the Background */
     backdrop-filter: blur(7px);
     filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
