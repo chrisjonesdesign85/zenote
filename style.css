@@ -172,7 +172,7 @@ nav {
     /* Blur the Background */
     backdrop-filter: blur(7px);
     /* Add a drop shadow */
-    
+
 }
 
 /* Modal Content */
@@ -185,6 +185,7 @@ nav {
     display: flex;
     flex-direction: column;
     filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
+
 }
 
 /* The Close Button */
@@ -223,11 +224,12 @@ nav {
 
 .new-post-form {
     width: 100%;
+    padding: 30px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rbga(0, 0, 0);
-    margin: auto;
 }
 
 input {
@@ -270,6 +272,7 @@ input {
     border: none;
     float: right;
     border-radius: 50px;
+    filter: drop-shadow(0 3mm 2mm rgb(0, 0, 0));
 }
 
 .post-submit:hover,
