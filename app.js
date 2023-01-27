@@ -315,7 +315,6 @@ let addNote = () => {
 
     // update the total notes number
     storeNumber()
-    getNotes()
 
     // clear the forms
     clearForms()
@@ -334,7 +333,9 @@ let updateNote = (e) => {
 
 // delete post
 let deleteNote = (e) => {
-
+    // update the total note counter
+    storeNumber()
+    
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
 
@@ -356,8 +357,7 @@ let deleteNote = (e) => {
         console.log(localStorage.getItem(key));
     });
 
-    // update the total note counter
-    storeNumber()
+    
 
 }
 
