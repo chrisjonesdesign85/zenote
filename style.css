@@ -348,7 +348,7 @@ select:focus {
 @media screen and (max-width: 780px) {
 
     .quote-div {
-        padding: 10px;
+        padding: 40px;
     }
 
     .modal-content {
