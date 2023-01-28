@@ -190,7 +190,7 @@ let addNote = () => {
         body: textBox
     }
 
-    // data.push(saveData)
+    data.push(saveData)
     // set the title and body in local storage
 
     localStorage.setItem(inputValue, textBox)
@@ -334,7 +334,7 @@ let updateNote = (e) => {
 // delete post
 let deleteNote = (e) => {
     // update the total note counter
-    storeNumber()
+    
     
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
@@ -351,11 +351,11 @@ let deleteNote = (e) => {
     // let newTitleA = titleText.toLowerCase()
     let newTitle = `"${newTitleA}"`
     console.log(newTitleA)
-    localStorage.removeItem(newTitle)
+    localStorage.removeItem(titleText)
 
-    Object.keys(localStorage).forEach(function (key) {
-        console.log(localStorage.getItem(key));
-    });
+    // Object.keys(localStorage).forEach(function (key) {
+        // console.log(localStorage.getItem(key));
+    // });
 
     
 
