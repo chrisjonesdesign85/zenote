@@ -27,7 +27,7 @@ let storeNumber = () => {
     storageNumber.textContent = localStorage.length
 }
 
-storeNumber()
+// storeNumber()
 
 // get notes
 let getNotes = () => {
@@ -170,6 +170,7 @@ let closeNote = () => {
     modal.style.display = "none";
 }
 
+// add a new note
 let addNote = () => {
 
     // get the input value
