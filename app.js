@@ -134,7 +134,7 @@ let getNotes = () => {
         container.append(newDiv)
     });
 
-
+    storeNumber()
 }
 
 //get notes from localStorage and create them on page load.
