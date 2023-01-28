@@ -314,7 +314,7 @@ let addNote = () => {
     container.appendChild(div)
 
     // add AOS fade-in to the note divs
-    div.setAttribute("data-aos", "flip-down")
+    // div.setAttribute("data-aos", "flip-down")
 
     // update the total notes number
     storeNumber()
@@ -337,7 +337,6 @@ let updateNote = (e) => {
 // delete post
 let deleteNote = (e) => {
     // update the total note counter
-    storeNumber()
     
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
@@ -356,6 +355,7 @@ let deleteNote = (e) => {
     console.log(newTitleA)
     localStorage.removeItem(titleText)
 
+    storeNumber()
     // Object.keys(localStorage).forEach(function (key) {
         // console.log(localStorage.getItem(key));
     // });
