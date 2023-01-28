@@ -27,7 +27,7 @@ let storeNumber = () => {
     storageNumber.textContent = localStorage.length
 }
 
-// storeNumber()
+storeNumber()
 
 // get notes
 let getNotes = () => {
@@ -40,8 +40,10 @@ let getNotes = () => {
 
         // create a new post div
         newDiv.classList.add("post", "aos-init", "aos-animate")
+        
         // add the filpdown animation 
         newDiv.setAttribute("data-aos", "flipdown")
+        
         // create a new div for the title elements
         let titleDiv = document.createElement("div")
 
