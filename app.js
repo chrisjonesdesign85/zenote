@@ -348,10 +348,10 @@ let deleteNote = (e) => {
     let titleText = e.parentElement.parentElement.firstChild.textContent
 
     // delete that localStorage Item
-    let newTitleA = titleText.toLowerCase()
+    // let newTitleA = titleText.toLowerCase()
     let newTitle = `"${newTitleA}"`
     console.log(newTitleA)
-    localStorage.removeItem(newTitleA)
+    localStorage.removeItem(newTitle)
 
     Object.keys(localStorage).forEach(function (key) {
         console.log(localStorage.getItem(key));
