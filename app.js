@@ -193,7 +193,7 @@ let addNote = () => {
         body: textBox
     }
 
-    data.push(saveData)
+    // data.push(saveData)
     // set the title and body in local storage
 
     localStorage.setItem(inputValue, textBox)
