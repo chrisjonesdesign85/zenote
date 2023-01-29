@@ -366,11 +366,8 @@ select:focus {
         width: 95%;
     }
 
-    /* .close {
-        margin-right: 0px;
-        background-color: red;
-    } */
+    .close {
+        margin-right: 10px;
+    }
 
 }
-
-@media screen and (max-wdith: 580px) {}
