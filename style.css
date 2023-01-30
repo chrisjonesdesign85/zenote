@@ -186,7 +186,6 @@ nav {
     /* Blur the Background */
     backdrop-filter: blur(7px);
     /* Add a drop shadow */
-
 }
 
 /* Modal Content */
@@ -306,13 +305,6 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-}
-
-.post-test {
-    width: 100%;
-    border-bottom: 1px solid #777;
-    margin-bottom: 50px;
-    background-color: red;
 }
 
 .title-div {
