@@ -39,7 +39,8 @@ label {
 h1,
 h2,
 p,
-a {
+a,
+legend {
     font-family: 'Syne Mono', monospace;
 }
 
@@ -199,7 +200,6 @@ nav {
     display: flex;
     flex-direction: column;
     filter: drop-shadow(0 6mm 4mm rgb(0, 0, 0));
-
 }
 
 /* The Close Button */
@@ -231,6 +231,9 @@ nav {
     border: none;
 }
 
+legend {
+    margin-bottom: 30px;
+}
 
 .modal-form {
     width: 90%;
