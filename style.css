@@ -91,7 +91,6 @@ nav {
     background: #85B4F8;
     border-radius: 50px;
     cursor: pointer;
-
 }
 
 #new-post:hover {
@@ -114,7 +113,8 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;;
+    align-items: center;
+    ;
 }
 
 .storage-number {
@@ -317,10 +317,26 @@ select:focus {
     color: #777;
 }
 
+.fade-in {
+    animation: fadeIn 1s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .fade-out {
     animation: fadeOut 1s;
     opacity: 0;
 }
+
 
 @keyframes fadeOut {
     from {
@@ -331,6 +347,8 @@ select:focus {
         opacity: 0;
     }
 }
+
+
 
 
 /* Media Queries **/

@@ -39,11 +39,8 @@ let getNotes = () => {
         let newDiv = document.createElement("div")
 
         // create a new post div
-        newDiv.classList.add("post", "aos-init", "aos-animate")
-        
-        // add the filpdown animation 
-        newDiv.setAttribute("data-aos", "flipdown")
-        
+        newDiv.classList.add("post")
+
         // create a new div for the title elements
         let titleDiv = document.createElement("div")
 
@@ -187,15 +184,7 @@ let addNote = () => {
         return false;
     }
 
-    // create an object with the note title and body
-    const saveData = {
-        title: inputValue,
-        body: textBox
-    }
-
-    // data.push(saveData)
     // set the title and body in local storage
-
     localStorage.setItem(inputValue, textBox)
 
     // dynamically created content
@@ -314,6 +303,7 @@ let addNote = () => {
     container.appendChild(div)
 
     // add AOS fade-in to the note divs
+    div.classList.add("animate__animated", "animate__fadeIn")
     // div.setAttribute("data-aos", "flip-down")
 
     // update the total notes number
@@ -337,7 +327,7 @@ let updateNote = (e) => {
 // delete post
 let deleteNote = (e) => {
     // update the total note counter
-    
+
     // add the fade-out to the parent post div
     e.parentElement.parentElement.parentElement.classList.add('fade-out')
 
@@ -357,10 +347,10 @@ let deleteNote = (e) => {
 
     storeNumber()
     // Object.keys(localStorage).forEach(function (key) {
-        // console.log(localStorage.getItem(key));
+    // console.log(localStorage.getItem(key));
     // });
 
-    
+
 
 }
 
