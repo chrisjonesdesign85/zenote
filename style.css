@@ -88,7 +88,8 @@ nav {
     color: white;
     padding: 10px;
     border: none;
-    background: rgb(2, 0, 36);
+    background: #85B4F8;
+    border-radius: 50px;
     cursor: pointer;
 
 }
@@ -99,11 +100,6 @@ nav {
     box-shadow: 1px 5px 6px black;
 }
 
-/* The text to the left of the new note button*/
-.new-note-helper {
-    color: #777;
-}
-
 .links {
     width: 150px;
     display: flex;
@@ -111,14 +107,14 @@ nav {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .links div {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;;
 }
 
 .storage-number {
@@ -157,9 +153,8 @@ nav {
 /* color the date and author blue */
 .date,
 .author {
-    color: #85B4F8;
+    color: ;
 }
-
 
 /* The Modal  */
 
