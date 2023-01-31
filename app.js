@@ -1,5 +1,5 @@
 //get username
-let username = "Chris"
+let username = "User"
 
 //Get the modal
 let modal = document.getElementById("myModal")
