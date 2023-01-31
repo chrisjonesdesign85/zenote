@@ -341,11 +341,12 @@ let deleteNote = (e) => {
 
     // delete that localStorage Item
     let newTitleA = titleText.toLowerCase()
-    let newTitle = `"${newTitleA}"`
     console.log(newTitleA)
     localStorage.removeItem(titleText)
 
+    // store the total notes number
     storeNumber()
+
     // Object.keys(localStorage).forEach(function (key) {
     // console.log(localStorage.getItem(key));
     // });
